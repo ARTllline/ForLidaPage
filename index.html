@@ -20,8 +20,34 @@
 
 <div id="question2" class="question" style="display: none;">
     <p>У вас шикарная жепа ( ‾ʖ̫‾)?</p>
-    <button style="margin-right: 100px" onclick="showNext('passwordEntry')">Оу да!</button>
+    <button style="margin-right: 100px" onclick="showNext('pumpBalloon')">Оу да!</button>
     <button id="noButton">Нет :(</button>
+</div>
+
+<div id="pumpBalloon" class="question" style="display: none;">
+    <p>Проверка на выносливость</p>
+    <p>Накачай шарик!</p>
+    <progress id="progressBar" value="0" max="100"></progress>
+    <button onclick="pump()">Качай!</button>
+    <button id="nextButton" onclick="showNext('blackjackGame')" style="display: none; float: left">Фух!</button>
+</div>
+
+<div id="blackjackGame" class="question" style="display: none;">
+    <p>Ёбаный рот этого казино!</p>
+    <h2>Игра в 21</h2>
+    <div id="dealerHand" class="hand">
+        <p>Карты дилера:</p>
+        <span id="dealerCards"></span>
+        <p>Счёт: <span id="dealerScore">0</span></p>
+    </div>
+    <div id="playerHand" class="hand">
+        <p>Ваши карты:</p>
+        <span id="playerCards"></span>
+        <p>Счёт: <span id="playerScore">0</span></p>
+    </div>
+    <button onclick="playerDrawsCard()">Взять карту</button>
+    <button onclick="playerStands()">Хватит</button>
+    <button  id="nextLevel" onclick="showNext('passwordEntry')" style="display: none; margin: 20px auto">Хуипи!</button>
 </div>
 
 <div id="passwordEntry" class="question" style="display: none;">

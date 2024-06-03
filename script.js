@@ -43,3 +43,112 @@ document.addEventListener('DOMContentLoaded', function () {
         };
     }
 });
+
+
+///////////////////
+
+
+let progress = 0;
+let pumping; // Таймер для уменьшения прогресса
+
+function pump() {
+    if (progress === 0 && !pumping) {
+        // Запускаем уменьшение прогресса, если это первое нажатие
+        pumping = setInterval(decreaseProgress, 100);
+    }
+
+    progress += 10; // Увеличиваем прогресс на 10 при каждом нажатии
+    updateProgress();
+
+    if (progress >= 100) {
+        clearInterval(pumping); // Останавливаем уменьшение прогресса
+        document.getElementById('nextButton').style.display = 'block'; // Показываем кнопку "Дальше"
+    }
+}
+
+function decreaseProgress() {
+    progress -= 2; // Уменьшаем прогресс на 2 каждые 100 мс
+    if (progress <= 0) {
+        progress = 0; // Гарантируем, что значение не уйдет в отрицательное
+        clearInterval(pumping); // Останавливаем таймер, если прогресс исчерпан
+    }
+    updateProgress();
+}
+
+function updateProgress() {
+    document.getElementById('progressBar').value = progress; // Обновляем прогресс-бар
+}
+
+///////////////////////////////////
+
+
+let dealerScore = 0, playerScore = 0;
+let dealerHand = [], playerHand = [];
+
+function startGame() {
+    resetGame();
+    playerDrawsCard();
+    playerDrawsCard();
+    dealerDrawsCard();
+}
+
+function resetGame() {
+    dealerHand = [];
+    playerHand = [];
+    dealerScore = 0;
+    playerScore = 0;
+    updateScores();
+}
+
+function playerDrawsCard() {
+    let card = drawCard();
+    playerHand.push(card);
+    playerScore += card;
+    updateScores();
+    if (playerScore > 21) {
+        alert('Перебор! Вы проиграли.');
+        startGame(); // Restart the game
+    }
+}
+
+function dealerDrawsCard() {
+    let card = drawCard();
+    dealerHand.push(card);
+    dealerScore += card;
+    updateScores();
+}
+function drawCard() {
+    return Math.floor(Math.random() * 11) + 1; // Рандомная карта от 1 до 11
+}
+
+function updateScores() {
+    document.getElementById('dealerCards').textContent = dealerHand.join(', ');
+    document.getElementById('playerCards').textContent = playerHand.join(', ');
+    document.getElementById('dealerScore').textContent = dealerScore;
+    document.getElementById('playerScore').textContent = playerScore;
+}
+
+function playerStands() {
+    while (dealerScore < 17) {
+        dealerDrawsCard();
+    }
+    // Обновляем DOM перед показом alert
+    updateScores();
+
+    // Добавляем небольшую задержку перед показом результатов
+    setTimeout(() => {
+        if (dealerScore > 21 || playerScore > dealerScore) {
+            alert('Вы выиграли!');
+            document.getElementById('nextLevel').style.display = 'block';
+        } else if (playerScore === dealerScore) {
+            alert('Ничья!');
+            startGame(); // Restart the game if it's a draw
+        } else {
+            alert('Вы проиграли!');
+            startGame(); // Restart the game if player loses
+        }
+    }, 100); // Задержка в 100 мс
+}
+
+
+window.onload = startGame; // Start the game when the window loads
