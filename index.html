@@ -7,13 +7,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="login">
-    <input type="password" id="password" placeholder="Введите пароль">
-    <button onclick="checkPassword()">Войти</button>
+<div id="question1" class="question">
+    <p>Вы именинница?</p>
+    <button onclick="showNext('question2')">Йес!</button>
+    <button onclick="showNext('question0')">Неа</button>
 </div>
-<iframe id="birthdayVideo" width="100%" height="100%" style="display: none;"
-        src="https://drive.google.com/file/d/1qAFnxxHpB40Q_9fs5ZXWk1vvpFtggaL6/view?usp=sharing" frameborder="0" allowfullscreen></iframe>
+
+<div id="question0" class="question" style="display: none;">
+    <p>Ухади</p>
+</div>
+
+
+<div id="question2" class="question" style="display: none;">
+    <p>У вас шикарная жепа ( ‾ʖ̫‾)?</p>
+    <button style="margin-right: 100px" onclick="showNext('passwordEntry')">Оу да!</button>
+    <button id="noButton">Нет :(</button>
+</div>
+
+<div id="passwordEntry" class="question" style="display: none;">
+    <p>Последняя проверка, введи кодовое слово:</p>
+    <input type="password" id="password" placeholder="Кодовое слово">
+    <button onclick="checkPassword()">Воть</button>
+</div>
+
+
+<iframe id="birthdayVideo" style="display: none;"
+        src="https://drive.google.com/file/d/1nPetS1vmGesyl_K3_IvZMxyd55W4ZJFZ/preview" frameborder="0" allowfullscreen></iframe>
 <script src="script.js"></script>
 </body>
 </html>
+
 

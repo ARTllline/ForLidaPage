@@ -4,23 +4,84 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
+    background: url('https://imagedelivery.net/9sCnq8t6WEGNay0RAQNdvQ/UUID-cl9b6wnpn3158q1nh3rqwlbqc/public') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif; /* Используем шрифт Poppins для более современного вида */
 }
 
-#login {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.question {
+    font-size: 26px;
+    background-color: rgba(255, 255, 255, 0.9); /* Слегка прозрачный белый фон */
+    padding: 70px 60px; /* Больше отступов для лучшей визуализации */
+    border-radius: 15px; /* Скругляем углы */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Мягкая тень для добавления глубины */
+    width: 500px; /* Фиксированная ширина для всех вопросов */
+    text-align: center; /* Центрирование текста */
+    position: relative; /* Для абсолютного позиционирования кнопок внутри */
+}
+
+button {
+    margin: 10px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #ff4081;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: auto; /* Автоматическая ширина в зависимости от содержимого */
+}
+
+button:hover {
+    background-color: #e00070;
+    transform: translateY(-3px); /* Поднимаем кнопку при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Усиленная тень при наведении */
+}
+
+input {
+    width: 100%; /* Полная ширина внутри контейнера .question */
+    padding: 10px;
+    margin-top: 20px;
+    border: 2px solid #ff4081; /* Граница в цвет кнопок */
+    border-radius: 10px;
+    box-sizing: border-box; /* Учитываем padding и border в ширине */
+}
+
+input:focus {
+    outline: none;
+    border-color: #e00070; /* Подсвечиваем при фокусе */
+    box-shadow: 0 0 8px rgba(224, 0, 112, 0.5); /* Мягкое свечение при фокусе */
+}
+
+
+#noButton {
+    transition: all .4s;
+    position: absolute;
+    left: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+#noButton:hover {
+    cursor: alias;
 }
 
 #birthdayVideo {
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
 }
 
-input, button {
-    margin: 5px;
-    padding: 10px;
-    font-size: 16px;
+#container {
+    width: 100%; /* Полная ширина экрана или родительского элемента */
+    height: 100vh; /* Высота во весь экран, можно настроить по желанию */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
