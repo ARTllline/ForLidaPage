@@ -1,8 +1,19 @@
+let body = document.getElementsByTagName('body')[0];
+
 function showNext(id) {
     const current = document.querySelector('.question:not([style*="display: none"])');
     if (current) {
         current.style.display = 'none';
     }
+
+    if(id === 'blackjackGame'){
+        body.style.backgroundImage='url(https://memepedia.ru/wp-content/uploads/2018/03/ebanyy-rot-etogo-kazino.png)'
+    }
+
+    if(id === 'passwordEntry'){
+        body.style.backgroundImage='url(https://imagedelivery.net/9sCnq8t6WEGNay0RAQNdvQ/UUID-cl9b6wnpn3158q1nh3rqwlbqc/public)'
+    }
+
     document.getElementById(id).style.display = 'block';
 }
 

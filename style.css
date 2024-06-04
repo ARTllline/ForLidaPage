@@ -1,5 +1,6 @@
 body, html {
     height: 100%;
+    width: 100%;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -8,6 +9,8 @@ body, html {
     background-size: cover;
     font-family: 'Poppins', sans-serif; /* Используем шрифт Poppins для более современного вида */
 }
+
+/*https://memepedia.ru/wp-content/uploads/2018/03/ebanyy-rot-etogo-kazino.png*/
 
 .question {
     font-size: 26px;
