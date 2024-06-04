@@ -30,6 +30,12 @@ body, html {
     border-radius: 5px;
 }
 
+
+div[id^=row] {
+    display: flex;
+}
+
+
 button {
     margin: 10px;
     padding: 12px 20px;
@@ -43,6 +49,33 @@ button {
     transition: background-color 0.3s, transform 0.2s;
     width: auto; /* Автоматическая ширина в зависимости от содержимого */
 }
+
+.tag-board{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tag[id^=row] {
+    display: flex;
+}
+.tag button{
+    height:32px;
+    width: 32px;
+    margin: 1px;
+    border-radius: 6px;
+
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tag button.empty {
+    background: grey;
+    border: 0;
+    border-radius: 2px;
+}
+
 
 button:hover {
     background-color: #e00070;

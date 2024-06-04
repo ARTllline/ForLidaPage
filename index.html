@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+
+
+
 <div id="question1" class="question">
     <p>Вы именинница?</p>
     <button onclick="showNext('question2')">Йес!</button>
@@ -29,7 +33,24 @@
     <p>Накачай шарик!</p>
     <progress id="progressBar" value="0" max="100"></progress>
     <button onclick="pump()">Качай!</button>
-    <button id="nextButton" onclick="showNext('blackjackGame')" style="display: none; float: left">Фух!</button>
+    <button id="nextButton" onclick="showNext('questionp')" style="display: none; float: left">Фух!</button>
+</div>
+
+<div id="questionp" class="question" style="display: none">
+    <p>Проверка на интеллект</p>
+    <div class="tag-board" id="board">
+        <div class="tag" id="row1">
+            <button> </button><button> </button><button> </button>
+        </div>
+        <div class="tag" id="row2" >
+            <button> </button><button> </button><button> </button>
+        </div>
+        <div class="tag" id="row3" >
+            <button> </button><button> </button><button> </button>
+        </div>
+    </div>
+
+    <button  id="questionpNextLevel" onclick="showNext('blackjackGame')" style="display: none; margin: 20px auto">Идём дальше!</button>
 </div>
 
 <div id="blackjackGame" class="question" style="display: none;">
@@ -59,7 +80,10 @@
 
 <iframe id="birthdayVideo" style="display: none;"
         src="https://drive.google.com/file/d/1nPetS1vmGesyl_K3_IvZMxyd55W4ZJFZ/preview" frameborder="0" allowfullscreen></iframe>
+
+
 <script src="script.js"></script>
+<script src="patnashki.js"></script>
 </body>
 </html>
 
