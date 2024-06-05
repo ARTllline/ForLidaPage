@@ -11,7 +11,7 @@
 
 
 
-<div id="question1" class="question">
+<div id="question1" class="question" style="">
     <p>Вы именинница?</p>
     <button onclick="showNext('question2')">Йес!</button>
     <button onclick="showNext('question0')">Неа</button>
@@ -29,15 +29,15 @@
 </div>
 
 <div id="pumpBalloon" class="question" style="display: none;">
-    <p>Проверка на выносливость</p>
-    <p>Накачай шарик!</p>
+    <p>Петрович, врубай насос</p>
+    <h2>Проверка на выносливость</h2>
     <progress id="progressBar" value="0" max="100"></progress>
     <button onclick="pump()">Качай!</button>
     <button id="nextButton" onclick="showNext('questionp')" style="display: none; float: left">Фух!</button>
 </div>
 
 <div id="questionp" class="question" style="display: none">
-    <p>Проверка на интеллект</p>
+    <h2>Проверка на интеллект</h2>
     <div class="tag-board" id="board">
         <div class="tag" id="row1">
             <button> </button><button> </button><button> </button>
@@ -50,12 +50,27 @@
         </div>
     </div>
 
-    <button  id="questionpNextLevel" onclick="showNext('blackjackGame')" style="display: none; margin: 20px auto">Идём дальше!</button>
+    <button  id="questionpNextLevel" onclick="showNext('mazeGame')" style="display: none; margin: 20px auto">Идём дальше!</button>
 </div>
 
-<div id="blackjackGame" class="question" style="display: none;">
+
+<div id="mazeGame" class="question"  style="display: none;">
+    <h2>Проверка на геймера</h2>
+    <div id="mazeContainer">
+        <canvas id="mazeCanvas" width="600" height="600"></canvas>
+    </div>
+    <div id="controls">
+        <button onclick="moveUp()">⬆</button><br>
+        <button onclick="moveLeft()">⬅</button>
+        <button onclick="moveDown()">⬇</button>
+        <button onclick="moveRight()">➡</button>
+    </div>
+    <button  id="nextLevelLab" onclick="showNext('blackjackGame')" style="display: none; margin: 20px auto">Сюда!</button>
+</div>
+
+<div id="blackjackGame" class="question" style="display: none;" >
     <p>Ёбаный рот этого казино!</p>
-    <h2>Игра в 21</h2>
+    <h2>Проверка на удачу</h2>
     <div id="dealerHand" class="hand">
         <p>Карты дилера:</p>
         <span id="dealerCards"></span>
@@ -71,10 +86,12 @@
     <button  id="nextLevel" onclick="showNext('passwordEntry')" style="display: none; margin: 20px auto">Хуипи!</button>
 </div>
 
+
+
 <div id="passwordEntry" class="question" style="display: none;">
     <p>Последняя проверка, введи кодовое слово:</p>
     <input type="password" id="password" placeholder="Кодовое слово">
-    <button onclick="checkPassword()">Воть</button>
+    <button onclick="checkPassword()">Im in</button>
 </div>
 
 
@@ -84,6 +101,7 @@
 
 <script src="script.js"></script>
 <script src="patnashki.js"></script>
+<script src="maze.js"></script>
 </body>
 </html>
 

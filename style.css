@@ -18,7 +18,8 @@ body, html {
     padding: 70px 60px; /* Больше отступов для лучшей визуализации */
     border-radius: 15px; /* Скругляем углы */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Мягкая тень для добавления глубины */
-    width: 500px; /* Фиксированная ширина для всех вопросов */
+    width: auto; /* Фиксированная ширина для всех вопросов */
+    min-width: 300px;
     text-align: center; /* Центрирование текста */
     position: relative; /* Для абсолютного позиционирования кнопок внутри */
 }
@@ -127,4 +128,15 @@ input:focus {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+#mazeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 2px solid #333;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
