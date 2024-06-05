@@ -17,6 +17,24 @@ body, html {
 
 /*https://memepedia.ru/wp-content/uploads/2018/03/ebanyy-rot-etogo-kazino.png*/
 
+.code-secret{
+    font-size: 26px;
+    background-color: rgba(255, 255, 255, 0.9); /* Слегка прозрачный белый фон */
+    padding: 70px 60px; /* Больше отступов для лучшей визуализации */
+    border-radius: 15px; /* Скругляем углы */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Мягкая тень для добавления глубины */
+    width: auto; /* Фиксированная ширина для всех вопросов */
+    min-width: 300px;
+    text-align: center; /* Центрирование текста */
+    position: absolute; /* Для абсолютного позиционирования кнопок внутри */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
 .question {
     font-size: 26px;
     background-color: rgba(255, 255, 255, 0.9); /* Слегка прозрачный белый фон */

@@ -71,6 +71,7 @@ function moveRight() {
 
 function checkWin() {
     if (player.x === exit.x && player.y === exit.y) {
+        document.getElementById('code3').style.display = 'block';
         document.getElementById('nextLevelLab').style.display = 'block';
     }
 }

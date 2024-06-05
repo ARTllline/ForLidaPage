@@ -80,6 +80,7 @@ function move( from, to){
 
 
         if (isGameFinished()) {
+            document.getElementById('code2').style.display = 'block';
             document.getElementById('questionpNextLevel').style.display = 'block';
         }
     }

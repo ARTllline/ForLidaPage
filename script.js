@@ -34,7 +34,7 @@ function showNext(id) {
 
 function checkPassword() {
     var passwordInput = document.getElementById('password').value;
-    var correctPassword = '1'; // Замените на ваш пароль
+    var correctPassword = '1337'; // Замените на ваш пароль
 
     if (passwordInput === correctPassword) {
         document.getElementById('passwordEntry').style.display = 'none';
@@ -88,6 +88,7 @@ function pump() {
 
     if (progress >= 100) {
         clearInterval(pumping); // Останавливаем уменьшение прогресса
+        document.getElementById('code1').style.display = 'block';
         document.getElementById('nextButton').style.display = 'block'; // Показываем кнопку "Дальше"
     }
 }
@@ -165,6 +166,7 @@ function playerStands() {
     setTimeout(() => {
         if (dealerScore > 21 || playerScore > dealerScore) {
             alert('Вы выиграли!');
+            document.getElementById('code4').style.display = 'block';
             document.getElementById('nextLevel').style.display = 'block';
         } else if (playerScore === dealerScore) {
             alert('Ничья!');
