@@ -9,7 +9,7 @@
 <body>
 
 
-<div id="question1" class="question" >
+<div id="question1" class="question">
     <p>Вы именинница?</p>
     <button onclick="showNext('question2')">Йес!</button>
     <button onclick="showNext('question0')">Неа</button>
@@ -22,9 +22,15 @@
 
 <div id="question2" class="question" style="display: none;">
     <p>У вас шикарная жепа ( ‾ʖ̫‾)?</p>
-    <button style="margin-right: 100px" onclick="showNext('pumpBalloon')">Оу да!</button>
+    <button style="margin-right: 100px" onclick="showNext('question3')">Оу да!</button>
     <button id="noButton">Нет :(</button>
 </div>
+
+<div id="question3" class="question"  style="display: none;">
+    <p>Чтобы доказать это <br> вам предстоит пройти испытания</p>
+    <button onclick="showNext('pumpBalloon')">Я готова!</button>
+</div>
+
 
 <div id="pumpBalloon" class="question" style="display: none;">
     <p>Петрович, врубай насос</p>
@@ -38,35 +44,45 @@
     <h2>Проверка на интеллект</h2>
     <div class="tag-board" id="board">
         <div class="tag" id="row1">
-            <button> </button><button> </button><button> </button>
+            <button></button>
+            <button></button>
+            <button></button>
         </div>
-        <div class="tag" id="row2" >
-            <button> </button><button> </button><button> </button>
+        <div class="tag" id="row2">
+            <button></button>
+            <button></button>
+            <button></button>
         </div>
-        <div class="tag" id="row3" >
-            <button> </button><button> </button><button> </button>
+        <div class="tag" id="row3">
+            <button></button>
+            <button></button>
+            <button></button>
         </div>
     </div>
 
-    <button  id="questionpNextLevel" onclick="showNext('mazeGame')" style="display: none; margin: 20px auto">Идём дальше!</button>
+    <button id="questionpNextLevel" onclick="showNext('mazeGame')" style="display: none; margin: 20px auto">Идём
+        дальше!
+    </button>
 </div>
 
 
-<div id="mazeGame" class="question" style="display: none;" >
+<div id="mazeGame" class="question" style="display: none;">
     <h2>Проверка на восприятие</h2>
     <div id="mazeContainer">
         <canvas id="mazeCanvas" width="600" height="600"></canvas>
     </div>
     <div id="controls">
-        <button onclick="moveUp()">⬆</button><br>
+        <button onclick="moveUp()">⬆</button>
+        <br>
         <button onclick="moveLeft()">⬅</button>
         <button onclick="moveDown()">⬇</button>
         <button onclick="moveRight()">➡</button>
     </div>
-    <button  id="nextLevelLab" onclick="showNext('blackjackGame')" style="display: none; margin: 20px auto">Сюда!</button>
+    <button id="nextLevelLab" onclick="showNext('blackjackGame')" style="display: none; margin: 20px auto">Сюда!
+    </button>
 </div>
 
-<div id="blackjackGame" class="question" style="display: none;" >
+<div id="blackjackGame" class="question" style="display: none;">
     <p>Ёбаный рот этого казино!</p>
     <h2>Проверка на удачу</h2>
     <div id="dealerHand" class="hand">
@@ -81,9 +97,8 @@
     </div>
     <button onclick="playerDrawsCard()">Взять карту</button>
     <button onclick="playerStands()">Хватит</button>
-    <button  id="nextLevel" onclick="showNext('passwordEntry')" style="display: none; margin: 20px auto">Хуипи!</button>
+    <button id="nextLevel" onclick="showNext('passwordEntry')" style="display: none; margin: 20px auto">Хуипи!</button>
 </div>
-
 
 
 <div id="passwordEntry" class="question" style="display: none;">
@@ -94,7 +109,8 @@
 
 
 <iframe id="birthdayVideo" style="display: none;"
-        src="https://drive.google.com/file/d/1nPetS1vmGesyl_K3_IvZMxyd55W4ZJFZ/preview" frameborder="0" allowfullscreen></iframe>
+        src="https://drive.google.com/file/d/1nPetS1vmGesyl_K3_IvZMxyd55W4ZJFZ/preview" frameborder="0"
+        allowfullscreen></iframe>
 
 
 <script src="script.js"></script>
