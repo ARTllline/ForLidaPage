@@ -5,6 +5,12 @@ const rows = [
 ]
 const myBoard = document.getElementById('board')
 
+const boardStart = [
+    [1, 2, 3],
+    [5, 6, 8],
+    [4, 0, 7],
+]
+
 const board = [
     [1, 2, 3],
     [5, 6, 8],
@@ -17,6 +23,7 @@ const boardComplete = [
 ]
 
 function drawAll(){
+
     for (let y = 0 ; y < 3; y++)
         for (let x = 0 ; x < 3; x++){
             rows[y][x].textContent = board[y][x] ? board[y][x] : '';
