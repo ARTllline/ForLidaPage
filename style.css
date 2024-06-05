@@ -175,3 +175,54 @@ input:focus {
     background-color: #f0f0f0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
+
+/* Медиа-запросы для адаптации под мобильные устройства */
+@media (max-width: 768px) {
+    .code-secret, .question {
+        font-size: 20px;
+        padding: 40px 30px;
+        min-width: 200px;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    input {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .code-secret, .question {
+        font-size: 16px;
+        padding: 30px 20px;
+        min-width: 150px;
+    }
+
+    button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    input {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    #mazeGame{
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #mazeContainer{
+        margin-top: 40px;
+        margin-bottom: 30px;
+        height: 300px;
+        transform: scale(0.6);
+    }
+}
