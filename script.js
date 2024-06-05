@@ -27,11 +27,6 @@ function showNext(id) {
     if(id === 'mazeGame'){
         body.style.backgroundImage='url(https://pbs.twimg.com/media/F5CwCdgWAAAMq24?format=jpg&name=900x900)'
     }
-    if(id === 'birthdayVideo'){
-
-        document.getElementById('codeContainer').style.display = 'none';
-        //.style.backgroundImage='url(https://pbs.twimg.com/media/F5CwCdgWAAAMq24?format=jpg&name=900x900)'
-    }
 
     document.getElementById(id).style.display = 'block';
 }
@@ -44,6 +39,7 @@ function checkPassword() {
         document.getElementById('passwordEntry').style.display = 'none';
         var video = document.getElementById('birthdayVideo');
         video.style.display = 'block';
+        document.getElementById('codeContainer').style.display = 'none';
         video.play();
     } else {
         alert('Неверный пароль!');

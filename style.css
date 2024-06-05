@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'CircularGlyphs';
+    src: url('/CircularGlyphs.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body, html {
     height: 100%;
     width: 100%;
@@ -33,6 +41,10 @@ body, html {
     top: 20px;
     left: 20px;
     z-index: 10;
+    font-family: 'CircularGlyphs', sans-serif;
+}
+.code-secret div{
+    font-family: 'CircularGlyphs', sans-serif;
 }
 
 .question {
