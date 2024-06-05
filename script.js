@@ -14,6 +14,21 @@ function showNext(id) {
         body.style.backgroundImage='url(https://imagedelivery.net/9sCnq8t6WEGNay0RAQNdvQ/UUID-cl9b6wnpn3158q1nh3rqwlbqc/public)'
     }
 
+
+    if(id === 'questionp'){
+        body.style.backgroundImage='url(https://ruanekdot.ru/_nw/299/07901435.jpg)'
+    }
+
+    if(id === 'pumpBalloon'){
+        body.style.backgroundImage='url(https://cs8.pikabu.ru/post_img/big/2016/05/08/8/1462711283114613881.jpg)'
+    }
+
+
+    if(id === 'mazeGame'){
+        body.style.backgroundImage='url(https://pbs.twimg.com/media/F5CwCdgWAAAMq24?format=jpg&name=900x900)'
+    }
+
+
     document.getElementById(id).style.display = 'block';
 }
 

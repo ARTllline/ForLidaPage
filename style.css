@@ -11,6 +11,10 @@ body, html {
     user-select: none;
 }
 
+*{
+    user-select: none;
+}
+
 /*https://memepedia.ru/wp-content/uploads/2018/03/ebanyy-rot-etogo-kazino.png*/
 
 .question {
