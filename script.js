@@ -37,8 +37,8 @@ function showNext(id) {
 }
 
 function checkPassword() {
-    var passwordInput = document.getElementById('password').value;
-    var correctPassword = 'Lidas Epic Shrek Day'; // Замените на ваш пароль
+    var passwordInput = document.getElementById('password').value.toLowerCase();
+    var correctPassword = 'Lidas Happy Shrek Day'.toLowerCase();
 
     if (passwordInput === correctPassword) {
         document.getElementById('passwordEntry').style.display = 'none';
