@@ -27,14 +27,18 @@ function showNext(id) {
     if(id === 'mazeGame'){
         body.style.backgroundImage='url(https://pbs.twimg.com/media/F5CwCdgWAAAMq24?format=jpg&name=900x900)'
     }
+    if(id === 'birthdayVideo'){
 
+        document.getElementById('codeContainer').style.display = 'none';
+        //.style.backgroundImage='url(https://pbs.twimg.com/media/F5CwCdgWAAAMq24?format=jpg&name=900x900)'
+    }
 
     document.getElementById(id).style.display = 'block';
 }
 
 function checkPassword() {
     var passwordInput = document.getElementById('password').value;
-    var correctPassword = '1337'; // Замените на ваш пароль
+    var correctPassword = 'Lidas Epic Shrek Day'; // Замените на ваш пароль
 
     if (passwordInput === correctPassword) {
         document.getElementById('passwordEntry').style.display = 'none';
